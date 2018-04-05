@@ -1,0 +1,42 @@
+title: "Jared Rader"
+author: "Jared Rader"
+description: "A blog about software development and other things I'm passionate about"
+more: "read more »"
+url: "http://jaredrader.com"
+baseurl: ""
+paginate: 5
+permalink: pretty
+excerpt_separator: <!-- more -->
+
+style:
+  minimalist: false
+  dark: false
+
+navigation:
+  - category/technical.html
+  - category/til.html
+
+comments:
+  disqus: "disqus-contrast"
+#  isso: "comments.mysite.org"
+
+links: # see http://fontawesome.io/icons/#brand for all possible icons
+  - twitter: "https://twitter.com/jaredrader/"
+  - github: "https://github.com/raderj89"
+  - linkedin: "https://linkedin.com/in/raderjared"
+
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+sass: {style: expanded}
+plugins: [jekyll-feed, jekyll-paginate, disqus-for-jekyll]
+
+disqus:
+  name: "jaredrader" # required
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
