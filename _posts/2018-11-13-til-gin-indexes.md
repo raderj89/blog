@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: TIL - GIN Indexes
 date: 2018-11-13 09:23 -0800
 categories: [til, technical]
@@ -17,6 +17,8 @@ At Reflektive, I've been working on a user profile feature that gives each perso
 Over time, the types of feedback we have in Reflektive has grown, and with each type of feedback, specific rules around who can see the feedback. For example, a user can give somebody private feedback, and only those two individuals should be allowed to see it. Or, Person A can write a private note about Person B, and not share it with Person B. While this is still stored as a Feedback in our database, and Person B is the recipient, Person B should not be allowed to see that Feedback.
 
 In total, we have 9 different types of feedbacks, and unless the feedback is public, the feedback is private and shared with, at most, 3 people.
+
+<!-- more -->
 
 Querying for these feedbacks got quite complicated, because at the time, we were using a combination of attributes and checking associations to determine the type of feedback. This led to a class that looked something like this (actual queries not shown):
 
